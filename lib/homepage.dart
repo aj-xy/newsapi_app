@@ -42,7 +42,7 @@ class _homepageState extends State<homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(249,249,249, 1),
+      backgroundColor: Color.fromRGBO(249, 249, 249, 1),
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(255, 255, 255, 1),
         title: Text(
@@ -102,6 +102,9 @@ class _homepageState extends State<homepage> {
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 28),
+                                        softWrap: false,
+                                        maxLines: 3,
+                                        overflow: TextOverflow.ellipsis,
                                       ),
                                       subtitle: Text(
                                         responseData[index]
@@ -114,7 +117,7 @@ class _homepageState extends State<homepage> {
                                       ),
                                     ),
                                     Column(
-                                      children: [
+                                      children: [SizedBox(height: 100,),
                                         Text("Published By"),
                                         Text(responseData[index]
                                             .creator
